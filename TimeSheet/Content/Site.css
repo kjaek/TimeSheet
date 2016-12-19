@@ -1,5 +1,4 @@
 ﻿body {
-    padding-top: 100px;
     padding-bottom: 20px;
 }
 
@@ -29,4 +28,55 @@ textarea {
 
 #timeentryfrm button {
     margin-top: 22px;
+}
+
+.largefont {
+    font-size:large;
+}
+
+.smallfont {
+    font-size:small;
+}
+
+.rightbanner {
+    padding-top: 10px;
+}
+
+@media (min-width: 768px){
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1  {
+    width: 100%;
+    *width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+  }
+}
+
+#submenu > div  {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+#submenu > div >div  {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#submenu > div {
+    border-radius:5px;
+}
+
+#submenu {
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom: 10px;
 }
