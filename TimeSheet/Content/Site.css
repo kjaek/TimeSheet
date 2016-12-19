@@ -93,4 +93,12 @@ textarea {
 
 .table {
     margin-top: 10px;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.inputcell {
+    margin-left: 10px;
+    width: 65%;
+    display:inline;
 }

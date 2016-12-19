@@ -5,26 +5,65 @@
 
 <div class="smallfont">John Brown: Monday, 12 December 2016</div>
 
-<table class="table table-hover table-bordered">
+
+    <table class="table table-responsive table-hover table-bordered">
+        <thead>
+            <tr>
+                <th class="col-md-3">Project</th>
+                <th class="col-md-2">Tasks Undertaken</th>
+                <th class="col-md-1">Start Time h:mm</th>
+                <th class="col-md-1">Finish Time h:mm</th>
+                <th class="col-md-1">Non-Worked h:mm</th>
+                <th class="col-md-1">Worked Hours h:mm</th>
+                <th class="col-md-2">Description of Tasks Undertaken</th>
+                <th class="col-md-1">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <select class="form-control">
+                        <option value="AL">Select Project</option>
+                        <option value="WY">ABC Services - General Office Work</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="form-control">
+                        <option value="AL">(none)</option>
+                        <option value="WY">Select Task</option>
+                        <option value="WY">Training</option>
+                    </select>
+                </td>
+                <td><label class="glyphicon glyphicon-play text-success"/><input type="text" class="form-control inputcell" /></td>
+                <td><span class="glyphicon glyphicon-stop text-danger"><input type="text" class="form-control inputcell" /></span></td>
+                <td><input type="text" class="form-control" /></td>
+                <td><label>1:00</label></td>
+                <td><input class="form-control"/></td>
+                <td><a class="btn btn-default">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+<table class="table table-responsive table-hover table-bordered">
     <thead>
         <tr>
-            <th class="col-md-3">Project</th>
-            <th class="col-md-2">Tasks Undertaken</th>
-            <th class="col-md-1">Start Time h:mm</th>
-            <th class="col-md-1">Finish Time h:mm</th>
-            <th class="col-md-1">Lunch/Non-Worked h:mm</th>
-            <th class="col-md-2">Description of Tasks Undertaken</th>
-            <th class="col-md-1">Delete</th>
+            <th class="col-md-3">Add</th>
+            <th class="col-md-2"></th>
+            <th class="col-md-3">Total Hours</th>
+            <th class="col-md-1">50.00</th>
+            <th class="col-md-3"></th>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-            <td>stuff</td>
-        </tr>
-    </tbody>
 </table>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/select2")
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".js-example-basic-single").select2();
+});
+</script>
 }
 
