@@ -13,5 +13,10 @@ namespace TimeSheet.Controllers
         {
             return View();
         }
+
+        public ActionResult InputTime()
+        {
+            return View();
+        }
     }
 }

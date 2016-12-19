@@ -24,6 +24,7 @@ textarea {
 
 #timeentryfrm {
     padding-bottom:15px;
+    padding-top:5px;
 }
 
 #timeentryfrm button {
@@ -79,4 +80,17 @@ textarea {
     padding-left:15px;
     padding-right:15px;
     padding-bottom: 10px;
+}
+
+
+.table > thead > tr > td {
+    vertical-align: middle;
+}
+
+.table > thead > tr > th {
+    vertical-align: middle;
+}
+
+.table {
+    margin-top: 10px;
 }
