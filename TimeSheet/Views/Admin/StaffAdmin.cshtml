@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewBag.Title = "StaffAdmin";
+}
+
+<form class="form-inline" id="timeentryfrm">
+    <div class="form-group">
+        <div>
+            <label class="control-label">Staff Type:</label>
+        </div>
+        <select class="form-control" name="Staff">
+            <option value="8">Adam Johnson</option>
+            <option value="16">Dave Clarke</option>
+            <option value="2">Dave Smith</option>
+            <option value="5">Emma Davidson</option>
+            <option value="11">Jamie Davies</option>
+            <option value="4">Jamie McDonald</option>
+            <option value="15">Jeff Mills</option>
+            <option value="17">Jeremy Gunter</option>
+            <option value="1" selected="">John Brown</option>
+            <option value="6">Kim O'Brien</option>
+            <option value="18">Lisa Jules</option>
+            <option value="3">Lucy Evans</option>
+            <option value="22">Matt Higgins</option>
+            <option value="9">Michael Boston</option>
+            <option value="19">Nadia Ferguson</option>
+            <option value="20">Nat Jefferson</option>
+            <option value="13">Paul Lucas</option>
+            <option value="7">Sarrah Conner</option>
+            <option value="12">Steve McCarthy</option>
+            <option value="10">Tammy Grant</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div>
+            <label class="control-label">Status:</label>
+        </div>
+        <select class="form-control" name="StartDate">
+            <option value="03 April 2017" class="OptionHighlight">03 April 2017</option>
+            <option value="20 March 2017" class="OptionHighlight">20 March 2017</option>
+            <option value="06 March 2017" class="OptionHighlight">06 March 2017</option>
+            <option value="20 February 2017" class="OptionHighlight">20 February 2017</option>
+            <option value="06 February 2017" class="OptionHighlight">06 February 2017</option>
+            <option value="23 January 2017" class="OptionHighlight">23 January 2017</option>
+            <option value="09 January 2017" class="OptionHighlight">09 January 2017</option>
+            <option value="26 December 2016" class="OptionHighlight">26 December 2016</option>
+            <option value="" class="OptionHighlight">-----------------------</option>
+            <option value="12 December 2016" selected="">12 December 2016</option>
+            <option value="28 November 2016">28 November 2016</option>
+            <option value="14 November 2016">14 November 2016</option>
+            <option value="31 October 2016">31 October 2016</option>
+            <option value="17 October 2016">17 October 2016</option>
+            <option value="03 October 2016">03 October 2016</option>
+            <option value="19 September 2016">19 September 2016</option>
+            <option value="05 September 2016">05 September 2016</option>
+            <option value="22 August 2016">22 August 2016</option>
+            <option value="08 August 2016">08 August 2016</option>
+            <option value="25 July 2016">25 July 2016</option>
+            <option value="11 July 2016">11 July 2016</option>
+            <option value="27 June 2016">27 June 2016</option>
+            <option value="13 June 2016">13 June 2016</option>
+            <option value="30 May 2016">30 May 2016</option>
+            <option value="16 May 2016">16 May 2016</option>
+            <option value="02 May 2016">02 May 2016</option>
+            <option value="18 April 2016">18 April 2016</option>
+            <option value="04 April 2016">04 April 2016</option>
+            <option value="21 March 2016">21 March 2016</option>
+            <option value="07 March 2016">07 March 2016</option>
+            <option value="22 February 2016">22 February 2016</option>
+            <option value="08 February 2016">08 February 2016</option>
+            <option value="25 January 2016">25 January 2016</option>
+            <option value="11 January 2016">11 January 2016</option>
+            <option value="28 December 2015">28 December 2015</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Display</button>
+    </div>
+</form>
+
+<table width="1370" cellspacing="1" cellpadding="2" class="table-bordered">
+    <thead>
+        <tr style="width: 1370px;">
+            <th style="width: 32px;"><a href="">Staff ID</a></th>
+            <th style="width: 50px;"><a href="">First Name</a></th>
+            <th style="width: 56px;"><a href="">Surname</a></th>
+            <th style="width: 50px;"><a href="">Logon ID</a></th>
+            <th style="width: 57px;">Password</th>
+            <th style="width: 200px;"><a href="">Email</a></th>
+            <th style="width: 101px;"><a href="">Staff Type</a></th>
+            <th style="width: 68px;">Special Access</th>
+            <th style="width: 47px;"><a href="">Supplier</a></th>
+            <th style="width: 67px;"><a href="">Resource Filter</a></th>
+            <th style="width: 66px;"><a href="">Global Projects</a></th>
+            <th style="width: 89px;"><a href="">Default <span style="white-space:nowrap">Charge Rate</span><br>(ex GST)</a></th>
+            <th style="width: 77px;"><a href="">Default <span style="white-space:nowrap">Cost Rate</span><br>(ex GST)</a></th>
+            <th style="width: 50px;"><a href="">Manager</a></th>
+            <th style="width: 60px;"><a href="">Reference</a></th>
+            <th style="width: 34px;"><a href="">Notes</a></th>
+            <th style="width: 37px;"><a href="">Status</a></th>
+            <th style="width: 37px;"><a href="">Logon Status</a></th>
+            <th colspan="4" style="width: 95px;"><a href="">Actions</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="right">1&nbsp;<a href=""><span class="glyphicon glyphicon-user" title="View Projects for this Staff member"/></a></td>
+            <td>John</td>
+            <td>Brown</td>
+            <td>admin</td>
+            <td align="center">******&nbsp;<a href=""><span class="glyphicon glyphicon-lock" title="Reset Password"/></a></td>
+            <td>
+                john@abcservices.comm
+                johnb@hotmail.comm
+            </td>
+            <td>Admin</td>
+            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td align="center">Yes</td>
+            <td align="right">$150.00</td>
+            <td align="right">$67.88</td>
+            <td></td>
+            <td><span style="cursor:pointer;" title=""></span></td>
+            <td><span style="cursor:pointer;" title=""></span></td>
+            <td>Active</td>
+            <td style="cursor:default;">&nbsp;<span class="glyphicon text-success glyphicon-ok-circle"/></td>
+            <td align="center" width="20"><a href="javascript:SubPgRID('Update',1)"><span class="glyphicon glyphicon-edit" title="Edit this record"/></a></td>
+            <td align="center" width="20"><a href="javascript:SubDel(1,'John Brown')"><span class="glyphicon glyphicon-trash" title="Delete this record"/></a></td>
+            <td align="center" width="20"><a href="javascript:SubPgRID('Copy',1)"><span class="glyphicon glyphicon-copy" title="Copy this record"/></a></td>
+            <td align="center" width="20"><a href="javascript:SubPgRID('Drilldown',1)"><span class="glyphicon glyphicon-zoom-in" title="View Time and Expenses details"/></a></td>
+        </tr>
+    </tbody>
+</table>
+
