@@ -290,6 +290,7 @@
     <Content Include="Views\Admin\StaffAdmin.cshtml" />
     <Content Include="Views\Admin\Projects.cshtml" />
     <Content Include="Views\Admin\StaffProjects.cshtml" />
+    <Content Include="Views\Admin\ProjectTasks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
