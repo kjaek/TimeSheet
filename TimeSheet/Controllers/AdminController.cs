@@ -13,5 +13,15 @@ namespace TimeSheet.Controllers
         {
             return View();
         }
+
+        public ActionResult Projects()
+        {
+            return View();
+        }
+
+        public ActionResult StaffProjects()
+        {
+            return View();
+        }
     }
 }
