@@ -291,6 +291,7 @@
     <Content Include="Views\Admin\Projects.cshtml" />
     <Content Include="Views\Admin\StaffProjects.cshtml" />
     <Content Include="Views\Admin\ProjectTasks.cshtml" />
+    <Content Include="Views\Admin\Customers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
