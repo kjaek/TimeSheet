@@ -26,7 +26,7 @@ namespace TimeSheet
             bundles.Add(new ScriptBundle("~/bundles/select2").Include(
                       "~/Scripts/select2.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Style/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/css/select2.css",
                       "~/Content/site.css"));
