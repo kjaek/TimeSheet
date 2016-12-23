@@ -43,5 +43,10 @@ namespace TimeSheet.Controllers
         {
             return View();
         }
+
+        public ActionResult CostCodes()
+        {
+            return View();
+        }
     }
 }

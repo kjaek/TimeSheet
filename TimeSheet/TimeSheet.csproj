@@ -294,6 +294,7 @@
     <Content Include="Views\Admin\Customers.cshtml" />
     <Content Include="Views\Admin\Managers.cshtml" />
     <Content Include="Views\Admin\Suppliers.cshtml" />
+    <Content Include="Views\Admin\CostCodes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
