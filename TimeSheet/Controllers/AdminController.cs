@@ -38,5 +38,10 @@ namespace TimeSheet.Controllers
         {
             return View();
         }
+
+        public ActionResult Suppliers()
+        {
+            return View();
+        }
     }
 }

@@ -293,6 +293,7 @@
     <Content Include="Views\Admin\ProjectTasks.cshtml" />
     <Content Include="Views\Admin\Customers.cshtml" />
     <Content Include="Views\Admin\Managers.cshtml" />
+    <Content Include="Views\Admin\Suppliers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
