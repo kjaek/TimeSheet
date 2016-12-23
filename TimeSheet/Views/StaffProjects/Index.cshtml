@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "StaffProjects";
+}
+
+<form class="form-inline" id="timeentryfrm">
+    <div class="form-group">
+        <div>
+            <label class="control-label">Project:</label>
+        </div>
+        <select class="form-control" name="Project">
+            <option value="1" selected="">All Projects</option>
+            <option value="2">ABC Services - General Office Work</option>
+            <option value="3">Adaptec - Help Desk Service</option>
+            <option value="4">Citrus Corporation - Computer Maintenance</option>
+            <option value="5">e-Global Corporation - Training Services</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div>
+            <label class="control-label">Staff Member:</label>
+        </div>
+        <select class="form-control" name="Staff">
+            <option value="8">Adam Johnson</option>
+            <option value="16">Dave Clarke</option>
+            <option value="2">Dave Smith</option>
+            <option value="5">Emma Davidson</option>
+            <option value="11">Jamie Davies</option>
+            <option value="4">Jamie McDonald</option>
+            <option value="15">Jeff Mills</option>
+            <option value="17">Jeremy Gunter</option>
+            <option value="1" selected="">John Brown</option>
+            <option value="6">Kim O'Brien</option>
+            <option value="18">Lisa Jules</option>
+            <option value="3">Lucy Evans</option>
+            <option value="22">Matt Higgins</option>
+            <option value="9">Michael Boston</option>
+            <option value="19">Nadia Ferguson</option>
+            <option value="20">Nat Jefferson</option>
+            <option value="13">Paul Lucas</option>
+            <option value="7">Sarrah Conner</option>
+            <option value="12">Steve McCarthy</option>
+            <option value="10">Tammy Grant</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div>
+            <label class="control-label">Status:</label>
+        </div>
+        <select class="form-control" name="Status">
+            <option value="1" selected="">All</option>
+            <option value="2">Active</option>
+            <option value="3">Disabled</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div>
+            <label class="control-label">Text Search:</label>
+        </div>
+        <input class="form-control" name="TextSearch" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Display</button>
+    </div>
+    <div class="form-group pull-right">
+        <button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>Add Staff to Project</button>
+    </div>
+</form>
+
+<table width="1370" cellspacing="1" cellpadding="2" class="table-bordered">
+    <thead>
+        <tr>
+            <th><a href="javascript:SubSort('ProjectStaffProjectCode')">Project Code</a></th>
+            <th><a href="javascript:SubSort('ProjectDescription')">Project Name</a></th>
+            <th><a href="javascript:SubSort('ProjectStatus')">Project<br>Status</a></th>
+            <th><a href="javascript:SubSort('StaffMember')">Staff Member</a></th>
+            <th><a href="javascript:SubSort('Role')">Role</a></th>
+            <th><a href="javascript:SubSort('ProjectStaffDescription')">Description</a></th>
+            <th><a href="javascript:SubSort('ChargeRate')">Charge Rate<br>(ex GST)</a></th>
+            <th><a href="javascript:SubSort('CostRate')">Cost Rate<br>(ex GST)</a></th>
+            <th><a href="javascript:SubSort('CostCode')">Cost Code</a></th>
+            <th><a href="javascript:SubSort('AccSysPSLink')">MYOB Activity</a></th>
+            <th><a href="javascript:SubSort('AccSysLineItemOrder')">MYOB<br>Line Item<br>Order</a></th>
+            <th><a href="javascript:SubSort('ProjectStaffStatus')">Status</a></th>
+            <th colspan="4"><a href="javascript:StartHelp('../','ActionIcons')" style="cursor:help;">Actions</a></th>
+        </tr>
+    </thead>
+</table>
+

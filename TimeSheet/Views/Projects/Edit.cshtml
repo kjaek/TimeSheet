@@ -4,6 +4,8 @@
     ViewBag.Title = "Edit";
 }
 
+<div class="col-md-12 formtitle">PROJECT DETAILS</div>
+
 @using (Html.BeginForm("Edit", "Staff", FormMethod.Post, new { @class = "form-horizontal col-xs-12" }))
 {
     @Html.AntiForgeryToken()

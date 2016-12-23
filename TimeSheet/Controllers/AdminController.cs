@@ -8,12 +8,6 @@ namespace TimeSheet.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
-        public ActionResult Projects()
-        {
-            return View();
-        }
-
         public ActionResult ProjectTasks()
         {
             return View();
