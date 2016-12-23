@@ -50,5 +50,8 @@ namespace TimeSheet.Models
         public string Reference { get; set; }
         // TODO: select list, Active and Disabled
         public string Status { get; set; }
+        [DisplayName("Notes:")]
+        [DataType(DataType.MultilineText)]
+        public string Notes { get; set; }
     }
 }

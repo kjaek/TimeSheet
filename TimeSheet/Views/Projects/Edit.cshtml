@@ -49,7 +49,10 @@
     </div>
     <div class="col-xs-5">
         <div class="form-group">
-
+            @Html.LabelFor(model => model.Notes, htmlAttributes: new { @class = "control-label col-xs-2" })
+            <div class="col-xs-12">
+                @Html.TextAreaFor(model => model.Notes, new { @class = "form-control", @rows = "5" })
+            </div>
         </div>
     </div>
 }
