@@ -6,15 +6,15 @@ using System.Web.Mvc;
 
 namespace TimeSheet.Controllers
 {
-    public class AdminController : Controller
+    public class ManagersController : Controller
     {
-
-        public ActionResult Suppliers()
+        // GET: Manager
+        public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult CostCodes()
+        public ActionResult Edit()
         {
             return View();
         }
