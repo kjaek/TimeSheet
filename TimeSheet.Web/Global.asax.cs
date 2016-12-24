@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using TimeSheet.Data;
+using TimeSheet.Web.App_Start;
 
 namespace TimeSheet
 {
@@ -12,10 +14,15 @@ namespace TimeSheet
     {
         protected void Application_Start()
         {
+            // Init database
+            System.Data.Entity.Database.SetInitializer(new TimeSheetSeedData());
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Bootstrapper.Run();
         }
     }
 }

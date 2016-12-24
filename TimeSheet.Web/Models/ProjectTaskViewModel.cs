@@ -19,8 +19,7 @@ namespace TimeSheet.Web.Models
                 new SelectListItem { Value = "false", Text = "No" }
             };
         }
-        // TODO: get current project name
-        public string Project { get; set; }
+        public int ProjectID { get; set; }
         [Required]
         [DisplayName("Description:")]
         [MinLength(2, ErrorMessage = "The {0} must be at least {1} characters long")]
@@ -28,10 +27,21 @@ namespace TimeSheet.Web.Models
         public string Description { get; set; }
         [DisplayName("Budget Amount:")]
         [DataType(DataType.Currency)]
-        public float? BudgetAmount { get; set; }
+        public decimal BudgetAmount { get; set; }
         [DisplayName("Budget Hours:")]
-        [Range(0, int.MaxValue, ErrorMessage = "Please enter valid integer number")]
-        public int BudgetHours { get; set; }
+        [Range(0, 9999999999999999.99, ErrorMessage = "Please enter valid integer number")]
+        public decimal BudgetHours { get; set; }
+        [Required]
+        [DisplayName("Chargeable:")]
+        public bool Chargeable { get; set; }
+        [DisplayName("Notes:")]
+        [DataType(DataType.MultilineText)]
+        public string Notes { get; set; }
+
+        public List<SelectListItem> ChargeableList { get; set; }
+
+        // TODO: get current project name
+        public string Project { get; set; }
         // TODO: external id what is it?
         public string ExternalID { get; set; }
         // TODO: sequence no, what is it?
@@ -40,13 +50,6 @@ namespace TimeSheet.Web.Models
         public string ResourceList { get; set; }
         // TODO: Reference, what is it?
         public string Reference { get; set; }
-        [Required]
-        [DisplayName("Chargeable:")]
-        public bool Chargeable { get; set; }
-        public List<SelectListItem> ChargeableList { get; set; }
-        [DisplayName("Notes:")]
-        [DataType(DataType.MultilineText)]
-        public string Notes { get; set; }
         // TODO: select list, Active and Disabled
         public string Status { get; set; }
     }
