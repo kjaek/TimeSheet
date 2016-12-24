@@ -8,14 +8,67 @@ using System.Data.Entity;
 
 namespace TimeSheet.Data
 {
-    public class TimeSheetSeedData : DropCreateDatabaseIfModelChanges<TimeSheetEntities>
+    public class TimeSheetSeedData : DropCreateDatabaseAlways<TimeSheetEntities>
     {
         protected override void Seed(TimeSheetEntities context)
         {
+            GetStaff().ForEach(s => context.Staff.Add(s));
             GetProjects().ForEach(p => context.Projects.Add(p));
             GetProjectTasks().ForEach(t => context.ProjectTasks.Add(t));
 
             context.Commit();
+        }
+
+        protected static List<Staff> GetStaff()
+        {
+            return new List<Staff>
+            {
+                new Staff()
+                {
+                    FirstName = "Adam",
+                    Surname = "Johnson",
+                    Username = "adamj",
+                    Email = "adamj@abcservices.comm",
+                    ChargeRate = 110,
+                    CostRate = 70,
+                },
+                new Staff()
+                {
+                    FirstName = "Dave",
+                    Surname = "Clarke",
+                    Username = "davec",
+                    Email = "davec@abcservices.comm",
+                    ChargeRate = 90,
+                    CostRate = 55,
+                },
+                new Staff()
+                {
+                    FirstName = "Dave",
+                    Surname = "Smith",
+                    Username = "dave",
+                    Email = "dave@abcservices.comm",
+                    ChargeRate = 150,
+                    CostRate = (decimal)64.17,
+                },
+                new Staff()
+                {
+                    FirstName = "Jamie",
+                    Surname = "Davidson",
+                    Username = "jamied",
+                    Email = "jamied@abcservices.comm",
+                    ChargeRate = 110,
+                    CostRate = 70,
+                },
+                new Staff()
+                {
+                    FirstName = "Jeff",
+                    Surname = "Mills",
+                    Username = "jeffm",
+                    Email = "jeffm@abcservices.comm",
+                    ChargeRate = 110,
+                    CostRate = 70,
+                },
+            };
         }
 
         protected static List<Project> GetProjects()

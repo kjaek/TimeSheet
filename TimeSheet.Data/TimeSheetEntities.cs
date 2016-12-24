@@ -15,6 +15,7 @@ namespace TimeSheet.Data
 
         public DbSet<Project> Projects { get; set; }
         public DbSet<ProjectTask> ProjectTasks { get; set; }
+        public DbSet<Staff> Staff { get; set; }
         
         public virtual void Commit()
         {
@@ -25,6 +26,7 @@ namespace TimeSheet.Data
         {
             modelBuilder.Configurations.Add(new ProjectConfiguration());
             modelBuilder.Configurations.Add(new ProjectTaskConfiguration());
+            modelBuilder.Configurations.Add(new StaffConfiguration());
         }
     }
 }
