@@ -14,7 +14,11 @@ namespace TimeSheet.Data
         {
             GetStaff().ForEach(s => context.Staff.Add(s));
             GetProjects().ForEach(p => context.Projects.Add(p));
+            GetStaffProjects().ForEach(sp => context.StaffProjects.Add(sp));
             GetProjectTasks().ForEach(t => context.ProjectTasks.Add(t));
+            GetCustomers().ForEach(c => context.Customers.Add(c));
+            GetManagers().ForEach(m => context.Managers.Add(m));
+            GetSuppliers().ForEach(s => context.Suppliers.Add(s));
 
             context.Commit();
         }
@@ -112,6 +116,18 @@ namespace TimeSheet.Data
             };
         }
 
+        protected static List<StaffProject> GetStaffProjects()
+        {
+            return new List<StaffProject>
+            {
+                new StaffProject()
+                {
+                    ChargeRate = 110,
+                    CostRate = 70,
+                },
+            };
+        }
+
         protected static List<ProjectTask> GetProjectTasks()
         {
             return new List<ProjectTask>
@@ -171,6 +187,83 @@ namespace TimeSheet.Data
                     BudgetAmount = 4000,
                     BudgetHours = 40,
                     Chargeable = true
+                },
+            };
+        }
+
+        protected static List<Customer> GetCustomers()
+        {
+            return new List<Customer>
+            {
+                new Customer()
+                {
+                    Code = "ABC",
+                    Name = "ABC Services (Internal)",
+                    Notes = "Internal company"
+                },
+                new Customer()
+                {
+                    Code = "AS",
+                    Name = "Adaptec",
+                    Notes = ""
+                },
+                new Customer()
+                {
+                    Code = "CC",
+                    Name = "Citrus Corporation",
+                    Notes = ""
+                },
+                new Customer()
+                {
+                    Code = "ES",
+                    Name = "e-Global Corporation",
+                    Notes = ""
+                },
+            };
+        }
+
+        protected static List<Manager> GetManagers()
+        {
+            return new List<Manager>
+            {
+                new Manager()
+                {
+                    FirstName = "Eric",
+                    Surname = "Johnson",
+                    Email = "eric.johnson@abcservices.com"
+                },
+                new Manager()
+                {
+                    FirstName = "Steven",
+                    Surname = "Black",
+                    Email = "steven.black@abcservices.com"
+                },
+            };
+        }
+
+        protected static List<Supplier> GetSuppliers()
+        {
+            return new List<Supplier>
+            {
+                new Supplier()
+                {
+                    Code = "AO",
+                    Name = "Active-8 Organisation",
+                },
+                new Supplier()
+                {
+                    Code = "EMA",
+                    Name = "Emacon",
+                },
+                new Supplier()
+                {
+                    Code = "EON",
+                    Name = "Eon Services",
+                },
+                new Supplier()
+                {
+                    Code = "JET",
+                    Name = "JetNet",
                 },
             };
         }

@@ -15,6 +15,10 @@ namespace TimeSheet.Web.Mappings
             CreateMap<Project, ProjectViewModel>();
             CreateMap<ProjectTask, ProjectTaskViewModel>();
             CreateMap<Staff, StaffViewModel>();
+            CreateMap<StaffProject, StaffProjectViewModel>();
+            CreateMap<Customer, CustomerViewModel>();
+            CreateMap<Manager, ManagerViewModel>();
+            CreateMap<Supplier, SupplierViewModel>();
         }
 
         public override string ProfileName

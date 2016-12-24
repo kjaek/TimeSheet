@@ -14,20 +14,27 @@ namespace TimeSheet.Web.Models
             ChargeRate = 0;
             CostRate = 0;
         }
-        // TODO: list of projects
-        public string Project { get; set; }
-        // TODO: list of staff
-        public string Staff { get; set; }
+
+        public int StaffProjectID { get; set; }
+
         [DisplayName("Role:")]
         [MinLength(2, ErrorMessage = "The {0} must be at least {1} characters long")]
         [MaxLength(10, ErrorMessage = "The {0} must be maximum {1} characters long")]
         public string Role { get; set; }
+
         [DisplayName("Hourly Charge Rate:")]
         [DataType(DataType.Currency)]
-        public float? ChargeRate { get; set; }
+        public decimal ChargeRate { get; set; }
+
         [DisplayName("Hourly Cost Rate:")]
         [DataType(DataType.Currency)]
-        public float? CostRate { get; set; }
+        public decimal CostRate { get; set; }
+
+
+        // TODO: list of projects
+        public string Project { get; set; }
+        // TODO: list of staff
+        public string Staff { get; set; }
         // TODO: drop down list of cost codes
         public string CodeCode { get; set; }
         // TODO: drop down list of status
